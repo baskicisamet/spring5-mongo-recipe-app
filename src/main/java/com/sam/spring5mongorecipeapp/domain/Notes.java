@@ -1,17 +1,17 @@
 package com.sam.spring5mongorecipeapp.domain;
 
+import org.springframework.data.annotation.Id;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-@EqualsAndHashCode(exclude = {"recipe"})
 public class Notes {
 
-   
+	@Id
     private String id;
-    private Recipe recipe;
     private String recipeNotes;
 
 
