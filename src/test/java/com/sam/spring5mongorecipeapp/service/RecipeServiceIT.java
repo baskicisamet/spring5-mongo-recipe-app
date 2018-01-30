@@ -3,6 +3,7 @@ package com.sam.spring5mongorecipeapp.service;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ import com.sam.spring5mongorecipeapp.repository.RecipeRepository;
 /**
  * Created by jt on 6/21/17.
  */
+@Ignore
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RecipeServiceIT {
