@@ -34,10 +34,10 @@ public class IngredientController {
     @GetMapping("/recipe/{recipeId}/ingredients")
     public String listIngredients(@PathVariable String recipeId, Model model){
         log.debug("Getting ingredient list for recipe id: " + recipeId);
-
+        System.out.println("ingredient id ::::::::::::::::: "+recipeService.findCommandById(recipeId).getIngredients().get(0).getId());
         // use command object to avoid lazy load errors in Thymeleaf.
         model.addAttribute("recipe", recipeService.findCommandById(recipeId));
-
+        log.debug("ingredient id ::::::::::::::::: "+recipeService.findCommandById(recipeId).getIngredients().get(0).getId());
         return "recipe/ingredient/list";
     }
 
